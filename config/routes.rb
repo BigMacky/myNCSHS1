@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "students/login" => "students/login.html.erb"
+  get "students/home" => "students/home.html.erb"
   resources :subjects
   resources :class_sections
   resources :announcements
