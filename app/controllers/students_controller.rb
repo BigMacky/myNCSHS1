@@ -12,6 +12,14 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def home
+    if :search_string == "" then
+      redirect_to "/students/login"
+    else
+      @students = Student.where("student_lrn = ?", params[:search_string])
+    end
+  end
+
   # GET /students/new
   def new
     @student = Student.new

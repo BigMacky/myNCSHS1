@@ -47,7 +47,7 @@ div#form1
 /*button generated at http://css3buttongenerator.com/  */
 .loginbutton {
   margin-top:3%;
-  background: #3cb0fd;
+  /*background: #3cb0fd;
   /*-webkit-border-radius: 28;*/
   /*-moz-border-radius: 28;*/
   border-radius: 28px;
@@ -55,16 +55,6 @@ div#form1
   color: #000000;
   font-size: 15px;
   padding: 5px 10px 5px 10px;
-  text-decoration: none;
-}
-
-.loginbutton:hover {
-  background: #2b7fb8;
-  background-image: -webkit-linear-gradient(top, #2b7fb8, #ebf5fc);
-  background-image: -moz-linear-gradient(top, #2b7fb8, #ebf5fc);
-  background-image: -ms-linear-gradient(top, #2b7fb8, #ebf5fc);
-  background-image: -o-linear-gradient(top, #2b7fb8, #ebf5fc);
-  background-image: linear-gradient(to bottom, #2b7fb8, #ebf5fc);
   text-decoration: none;
 }
 
@@ -87,7 +77,7 @@ input.loginbox
 div#wrapper
 {
 	position:relative;
-	width:60%;
+	width:80%;
 	margin:auto;
 }
 
@@ -99,24 +89,40 @@ div#menu
 	background-size:100%;
 	background-repeat: no-repeat;
 	height:10%;
-	font-weight:bold;
 }
 
 img#logout
 {
-	width:5%;
+	width:30px;
 	height:auto;
-	margin-left:5%;
-	margin-top: -0.5%;
+	margin-left:50px;
+	margin-top: -0.8%;
 	position:absolute;
 }
+
+img#profile
+{
+	width:30px;
+	height:auto;
+	margin-top: -0.8%;
+	position:absolute;
+	margin-left:10px;
+}
+
+img#idpic
+{
+	width: 80%;
+	height:auto;
+	padding: 0;
+}
+
 
 div#form2
 {
 	position:relative;
 	margin-top:-5%;
 	font-size: 20px;
-	margin-left:30%;
+	margin-left:25%;
 }
 
 div#content
@@ -126,6 +132,7 @@ div#content
 	background-size: 100%;
 	padding: 20px 10px 10px 40px;
 	overflow:auto;
+	font-size: 12px;
 }
 input
 {
@@ -143,7 +150,6 @@ a.menuitem
 	padding: 10px;
 	text-decoration:none;
 	color: #000;
-	font-weight:bold;
 }
 a#current
 {
@@ -152,14 +158,12 @@ a#current
 
 p.title
 {
-	font-family: Berlin Sans FB;
-	font-size: 2em;
+	font-size: 30px;
 }
 
 p.headline
 {
-	font-family: Berlin Sans FB;
-	font-size: 1.2em;
+	font-size: 20px;
 }
 img#logo
 {
@@ -174,11 +178,17 @@ span#name
 	float: right;
 	margin-top: -2%;
 	margin-left:60%;
-	font-family: Berlin Sans FB;
 }
 
 div#footer
 {
 	size:10%;
 	background: #fff;
+}
+
+span.date
+{
+	font-size: 12px;
+	margin-left: 20px;
+	font-style: italic;
 }

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get "students/" => "students/login.html.erb"
+  get "students/login" => "students/login.html.erb"
   get "students/index" => "students#index"
-  get "students/home" => "students/home.html.erb"
+  post "students/home" => "students#home"
   get "students/grades" => "students/grades.html.erb"
   get "students/classmates" => "students/classmates.html.erb"
   resources :subjects

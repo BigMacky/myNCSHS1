@@ -1,33 +1,33 @@
 <body id="home">
 	<div id="wrapper">
+		<% student = @students.first %>
 		<!-- insert the name of student here !-->
-		<span id="name">Logged in as: JUAN DELA CRUZ, 2nd Year</span>
-		<div id="menu">
-			<img src="/img/ncshs.gif" id="logo"/>
-		</div>
-		<div id="form2">
-			<a href="#" class="menuitem" id="current">HOME</a>
-			<a href="#" class="menuitem">GRADES</a>
-			<a href="#" class="menuitem">SCHEDULE</a>
-			<a href="#" class="menuitem">CURRICULUM</a>
-			<a href="#"><img src="/img/out.png" id="logout"/></a>
-		</div>
-		
-		<div id="content">
-			<p class="title">Announcements</p>
-
-			<p class="headline">Lorem Ipsum</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id tellus orci. Aenean euismod faucibus velit, vitae convallis sem malesuada eu. Vestibulum accumsan, tortor eu malesuada commodo, mi odio varius neque, vel cursus erat tellus nec leo. Nullam varius hendrerit nibh vel viverra. Nullam tempor sapien dui. <a href="#">Continue reading...</a></p>
-
-			<p class="headline">Lorem Ipsum</p>
-			<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. Vivamus rutrum quam ut iaculis hendrerit. Vestibulum aliquam aliquam rutrum. Cras eu sapien et ipsum porta facilisis. Nulla a viverra massa. <a href="#">Continue reading...</a></p>
-
-			<p class="headline">Lorem Ipsum</p>
-			<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. Vivamus rutrum quam ut iaculis hendrerit. Vestibulum aliquam aliquam rutrum. Cras eu sapien et ipsum porta facilisis. Nulla a viverra massa. <a href="#">Continue reading...</a></p>
-
-			<p class="headline">Lorem Ipsum</p>
-			<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. Vivamus rutrum quam ut iaculis hendrerit. Vestibulum aliquam aliquam rutrum. Cras eu sapien et ipsum porta facilisis. Nulla a viverra massa. <a href="#">Continue reading...</a></p>
-					
+		<span id="name">Logged in as: <%= student.first_name%> <%=student.middle_name%> <%=student.last_name%>, <%=student.year_level%>nd Year</span>
+		<div id="wrapper">
+			<div id="menu">
+				<img src="/assets/img/ncshs.gif" id="logo"/>
+			</div>
+			<div id="form2">
+					<a href="index.html" class="menuitem" id="current">HOME</a>
+					<a href="grades.html" class="menuitem">GRADES</a>
+					<a href="schedule.html" class="menuitem">SCHEDULE</a>
+					<a href="curriculum.html" class="menuitem">CURRICULUM</a>
+					<a href="NCSHS.html"><img src="/assets/img/out.png" id="logout"/></a>
+					<a href="profile.html"><img src="img/profile.png" id="profile"/></a>
+			</div>
+			
+			<div id="content">
+				<p class="title">Announcement 1 </p>
+			<% @announcement = Announcement.all %>
+			<% @announcement.each do |a|%>
+				<p class="headline"><%= a.title %><br><span class="date">March 7, 2017</span></p>
+				<p><%= a.content %></p>
+			<% end %>
+				<p class="headline">Announcement 2<br><span class="date">March 9, 2017</span></p>
+				<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. Vivamus rutrum quam ut iaculis hendrerit. Vestibulum aliquam aliquam rutrum. Cras eu sapien et ipsum porta facilisis. Nulla a viverra massa. <a href="#">Continue reading...</a></p></p>
+				<p class="headline">Announcement 3<br><span class="date">March 11, 2017</span></p>
+				<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. <a href="#">Continue reading...</a></p></p>
+			</div>
 		</div>
 	</div>
 </body>
