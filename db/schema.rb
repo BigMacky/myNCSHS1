@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170301141638) do
+ActiveRecord::Schema.define(version: 20170311074336) do
 
   create_table "announcements", force: :cascade do |t|
     t.date     "post_date"
@@ -28,6 +28,23 @@ ActiveRecord::Schema.define(version: 20170301141638) do
     t.string   "adviser"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "student_grade_subjects", force: :cascade do |t|
+    t.string   "student_lrn"
+    t.string   "subject_title"
+    t.integer  "quarter"
+    t.decimal  "grade"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "student_year_sections", force: :cascade do |t|
+    t.string   "student_lrn"
+    t.integer  "year_level"
+    t.string   "section_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "students", force: :cascade do |t|
@@ -48,6 +65,21 @@ ActiveRecord::Schema.define(version: 20170301141638) do
     t.string   "subject_title"
     t.string   "schedule"
     t.string   "instructor"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "teacher_advise_classes", force: :cascade do |t|
+    t.string   "teacher_id"
+    t.string   "section_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "teacher_subject_sections", force: :cascade do |t|
+    t.string   "teacher_id"
+    t.string   "subject_title"
+    t.string   "section_name"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

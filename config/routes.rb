@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :teacher_advise_classes
+  resources :teacher_subject_sections
+  resources :student_year_sections
+  resources :student_grade_subjects
   get "students/login" => "students/login.html.erb"
   get "students/index" => "students#index"
   post "students/home" => "students#home"
