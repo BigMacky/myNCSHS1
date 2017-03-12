@@ -12,6 +12,13 @@ class TeachersController < ApplicationController
   def show
   end
 
+  def home
+      @teachers = Teacher.where("license_id = ?", params[:search_id])
+    if @teachers == :nil then
+      redirect_to "/teachers/login"
+    end
+  end
+
   # GET /teachers/new
   def new
     @teacher = Teacher.new

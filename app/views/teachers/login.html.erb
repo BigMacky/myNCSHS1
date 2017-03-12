@@ -2,9 +2,9 @@
 	<div id = "login">
 		<div id="form1">
 			<img src="/assets/img/ncshs.gif" id="logo"/>
-			<%= form_tag "/students/home" do %>
-				<span class = "logintxt">ID Number</span>
-					<%= text_field_tag :search_lrn%>
+			<%= form_tag "/teachers/home" do %>
+				<span class = "logintxt">Teacher ID</span>
+					<%= text_field_tag :search_id%>
 				<p></p>
 				<span id = "logintxt">Password</span>
 					<!-- <%= password_field_tag :search_pass%> !-->

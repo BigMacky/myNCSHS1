@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
   end
 
   def home
-      @students = Student.where("student_lrn = ?", params[:search_string])
+      @students = Student.where("student_lrn = ?", params[:search_lrn])
     if @students == :nil then
       redirect_to "/students/login"
     end

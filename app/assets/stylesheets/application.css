@@ -38,7 +38,6 @@ div#form1
 	margin-bottom: auto;
 	width:15%;
 	height:32%;
-	text-align: center;
 	padding: 30px;
 	background:#ebf5fc;
 	font-family: Berlin Sans FB;
@@ -134,10 +133,10 @@ div#content
 	overflow:auto;
 	font-size: 12px;
 }
+
 input
 {
 	height: 15%;
-	text-align:center;
 }
 
 a
@@ -165,10 +164,11 @@ p.headline
 {
 	font-size: 20px;
 }
+
 img#logo
 {
 	margin-top:-4%;
-	height:250%;
+	height: 100%;
 	width:auto;
 }
 

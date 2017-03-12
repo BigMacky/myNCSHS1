@@ -1,8 +1,8 @@
 <body id="home">
 	<div id="wrapper">
-		<% student = @students.first %>
-		<!-- insert the name of student here !-->
-		<span id="name">Logged in as: <%= student.first_name%> <%=student.middle_name%> <%=student.last_name%>, <%=student.year_level%>nd Year</span>
+		<% teacher = @teachers.first %>
+		<!-- insert the name of teacher here !-->
+		<span id="name">Logged in as: <%= teacher.first_name%> <%=teacher.middle_name%> <%=teacher.last_name%> </span>
 		<div id="wrapper">
 			<div id="menu">
 				<img src="/assets/img/ncshs.gif" id="logo"/>
@@ -12,8 +12,8 @@
 					<a href="grades.html" class="menuitem">GRADES</a>
 					<a href="schedule.html" class="menuitem">SCHEDULE</a>
 					<a href="curriculum.html" class="menuitem">CURRICULUM</a>
-					<a href="/students/login"><img src="/assets/img/out.png" id="logout"/></a>
-					<a href="/students/<%= student.id%>"><img src="/assets/img/profile.png" id="profile"/></a>
+					<a href="/teachers/login"><img src="/assets/img/out.png" id="logout"/></a>
+					<a href="/teachers/<%= teacher.id%>"><img src="/assets/img/profile.png" id="profile"/></a>
 			</div>
 			
 			<div id="content">
