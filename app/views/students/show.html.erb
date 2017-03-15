@@ -8,9 +8,9 @@
 			</div>
 			<div id="form2">
 					<a href="/students/home" class="menuitem">HOME</a>
-					<a href="grades.html" class="menuitem">GRADES</a>
-					<a href="schedule.html" class="menuitem">SCHEDULE</a>
-					<a href="curriculum.html" class="menuitem">CURRICULUM</a>
+					<a href="/students/grades.html.erb" class="menuitem">GRADES</a>
+					<a href="/students/schedule.html.erb" class="menuitem">SCHEDULE</a>
+					<a href="/students/curriculum.html.erb" class="menuitem">CURRICULUM</a>
 					<a href="/students/login"><img src="/assets/img/out.png" id="logout"/></a>
 					<a href="/students/<%= @student.id%>"><img src="/assets/img/profile.png" id="profile"/></a>
 			</div>
@@ -63,8 +63,8 @@
 					<%= @student.year_level %>
 				</p>
 
-				<!--<%= link_to 'Edit', edit_student_path(@student) %> |
-				<%= link_to 'Back', students_path %> !-->
+				<%= link_to 'Edit Profile', edit_student_path(@student) %>
+				<!--<%= link_to 'Back', students_path %> !-->
 			</div>
 		</div>
 	</div>

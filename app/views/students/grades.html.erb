@@ -1,0 +1,20 @@
+<body>
+	<% student = @students.first %>
+	<span id="name">Logged in as: <%= student.last_name%> 2nd Year</span>
+	<div id="wrapper">
+		<div id="menu">
+		<img src="img/ncshs.gif" id="logo"/>
+		</div>
+		<div id="form2">
+				<a href="#" class="menuitem">HOME</a>
+				<a href="#" class="menuitem" id="current">GRADES</a>
+				<a href="#" class="menuitem">SCHEDULE</a>
+				<a href="#" class="menuitem">CURRICULUM</a>
+				<a href="/students/login"><img src="img/out.png" id="logout"/></a>
+				<a href="/students/<%= student.id%>"><img src="img/profile.png" id="profile"/></a>
+		</div>
+		<div id="content">
+			
+		</div>
+	</div>
+</body>

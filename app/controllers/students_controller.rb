@@ -12,11 +12,20 @@ class StudentsController < ApplicationController
   def show
   end
 
+  #def login
+  #end
+
   def home
       @students = Student.where("student_lrn = ?", params[:search_lrn])
     if @students == :nil then
       redirect_to "/students/login"
+    #else
+      #redirect_to "/students/#{student.id}/home"
     end
+  end
+
+  def grades
+    @students = Student.where("id = ?", params[:id])
   end
 
   # GET /students/new
